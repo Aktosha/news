@@ -25,7 +25,6 @@ class UsersListSerializer(serializers.ModelSerializer):
         return attrs
 
     def create(self, validate_data):
-        validate_data.pop('password2')
         user = User.objects.create_user(
             validate_data.pop('username'),
             password=validate_data.pop('password')

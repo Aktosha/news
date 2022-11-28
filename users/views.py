@@ -7,5 +7,5 @@ from django.contrib.auth.models import User
 class RegisterAPIView(generics.GenericAPIView):
     queryset = User.objects.all()
     serializer_class = UsersListSerializer
-    permission_classes = (AllowAny)
+    permission_classes = AllowAny
 
